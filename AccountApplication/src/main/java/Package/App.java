@@ -1,6 +1,6 @@
 package Package;
 
-
+import com.google.gson.Gson;
 
 public class App {
 
@@ -17,7 +17,7 @@ public class App {
 		service.accounts.put(account1.getAccountNumber(), account1);
 		service.accounts.put(account2.getAccountNumber(), account2);
 	
-		System.out.println(service.receiveFromMap(1));
+		System.out.print(new Gson().toJson(service.receiveFromMap(2)));
 		
 	}
 
