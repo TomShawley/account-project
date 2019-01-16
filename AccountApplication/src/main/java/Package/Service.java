@@ -11,4 +11,9 @@ public	Map<Integer, Account> accounts = new HashMap<Integer, Account>();
 		return person;
 		
 	}
+	public int nameCycle (String firstName) {
+		int counter=0;
+		return counter;
+		
+	}
 }
