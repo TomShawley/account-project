@@ -13,7 +13,7 @@ private	Map<Integer, Account> accounts = new HashMap<Integer, Account>();
 	}
 	public int nameCycle (String firstName) {
 		int counter=0;
-		for (int i = 0; i<accounts.size();i++) {
+		for (int i = 1; i<=accounts.size();i++) {
 			if (accounts.get(i).getFirstName().equals(firstName)) {
 				 
 				counter ++;

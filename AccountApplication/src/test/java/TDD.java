@@ -39,7 +39,7 @@ public class TDD {
 		assertEquals(0, service.nameCycle(firstName));
 	}
 	@Test
-	public void nameCycle() {
+	public void nameCycleTom() {
 		
 		service.getAccounts().put(1, account1);
 		service.getAccounts().put(2, account2);
@@ -47,6 +47,16 @@ public class TDD {
 		service.getAccounts().put(4, account4);
 		
 		assertEquals(3,service.nameCycle("Tom"));
+	}
+	@Test
+	public void nameCycleTim() {
+		
+		service.getAccounts().put(1, account1);
+		service.getAccounts().put(2, account2);
+		service.getAccounts().put(3, account3);
+		service.getAccounts().put(4, account4);
+		
+		assertEquals(1,service.nameCycle("Tim"));
 	}
 	
 }
