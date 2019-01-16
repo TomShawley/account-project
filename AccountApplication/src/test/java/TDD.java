@@ -25,22 +25,28 @@ public class TDD {
 	@Test
 	public void recieveFromMap() {
 		
-		service.accounts.put(1, account1);
-		service.accounts.put(2, account2);
+		service.getAccounts().put(1, account1);
+		service.getAccounts().put(2, account2);
 		
-		assertEquals(service.accounts.get(1), service.receiveFromMap(1));
+		assertEquals(service.getAccounts().get(1), service.receiveFromMap(1));
 
 		assertEquals("Tim", service.receiveFromMap(2).getFirstName());
 	}
 	@Test
+	public void nameCycleCounter () {
+		String firstName = "Tom";
+		
+		assertEquals(0, service.nameCycle(firstName));
+	}
+	@Test
 	public void nameCycle() {
 		
-		service.accounts.put(1, account1);
-		service.accounts.put(2, account2);
-		service.accounts.put(3, account3);
-		service.accounts.put(4, account4);
+		service.getAccounts().put(1, account1);
+		service.getAccounts().put(2, account2);
+		service.getAccounts().put(3, account3);
+		service.getAccounts().put(4, account4);
 		
-		assertEquals(4,service.nameCycle("Tom"));
+		assertEquals(3,service.nameCycle("Tom"));
 	}
 	
 }

@@ -14,8 +14,8 @@ public class App {
 		Account account1 = new Account("Tom", "Shawley", 1);
 		Account account2 = new Account("Guy", "Funke", 2);
 		
-		service.accounts.put(account1.getAccountNumber(), account1);
-		service.accounts.put(account2.getAccountNumber(), account2);
+		service.getAccounts().put(account1.getAccountNumber(), account1);
+		service.getAccounts().put(account2.getAccountNumber(), account2);
 	
 		System.out.print(new Gson().toJson(service.receiveFromMap(2)));
 		
